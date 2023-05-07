@@ -16,7 +16,7 @@ import addressing_environment as ads_env
 
 import logging
 
-stamp = '0528'
+stamp = '20230507'
 logging.basicConfig(filename='sensor_log'+stamp+'.log', level=logging.WARNING)  #INFO  DEBUG
 log = logging.getLogger()
 
@@ -27,7 +27,7 @@ def ac_modbus2mongodb():
 
         DBclient = MongoClient('mongodb://192.168.1.10/',
                                username='sensorManager',
-                               password='manage123456',
+                               password='cpes45097',
                                authSource='admin',
                                serverSelectionTimeoutMS=1000)
 
@@ -272,7 +272,7 @@ def env_modbus2mongodb():
 
         DBclient = MongoClient('mongodb://192.168.1.10/',
                                username='sensorManager',
-                               password='manage123456',
+                               password='cpes45097',
                                authSource='admin',
                                serverSelectionTimeoutMS=1000)
 
@@ -372,7 +372,7 @@ def power_modbus2mongodb():
 
         DBclient = MongoClient('mongodb://192.168.1.10/',
                                username='sensorManager',
-                               password='manage123456',
+                               password='cpes45097',
                                authSource='admin',
                                serverSelectionTimeoutMS=1000)
 

@@ -8,10 +8,15 @@ https://pymongo.readthedocs.io/en/stable/index.html
 ### apscheduler文档
 https://apscheduler.readthedocs.io/en/stable/index.html
 
+# python版本  
+python==3.7+  
+pymodbus==2.5.3  
+
+
 # 用户教程  
 ## 数据库连接
 ![](fig/navicat_connect.png)  
-密码：test123456  
+密码：pingtaishiyan  
 
 # 管理员教程  
 ## 停电后重启  
@@ -29,7 +34,7 @@ https://apscheduler.readthedocs.io/en/stable/index.html
     ![](fig/cmd_nano_stamp.png)  
     修改后用**Ctrl+X**保存  
 4. 运行python程序  
-    `nohup python3 execution/sensor_manage_server.py &`
+    `nohup python execution/sensor_manage_server.py &`
 
 ## 关闭程序
 1. 获取进程号  
@@ -53,6 +58,13 @@ https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/#run-mongodb-
     `use sensor_management`  
     `db.createUser({user: "sensorManager", pwd:"manage123456", roles: [ { role: "readWrite", db: "sensor_management" }]})`  
     `db.createUser({user: "sensorTester", pwd:"test123456", roles: [{ role: "read", db: "sensor_management" }]})`  
+
+
+### 修改密码
+    `use admin`  
+    db.changeUserPassword("sensorManager", "cpes45097")
+    db.changeUserPassword("sensorTester", "pingtaishiyan")
+
 #### 网上教程
 https://www.jianshu.com/p/5a104184e010
 
